@@ -65,11 +65,11 @@ class Calculator:
             self.memory = result
             return result
         except ZeroDivisionError:
-            return "Error: Division by zero!"
+            return "Error: Division by zero is undefined!"
         except ValueError as e:
-            return f"Error: Invalid value - {str(e)}"
+            return f"Error: Invalid expression - {str(e)}"
         except Exception as e:
-            return f"Error: {str(e)}"
+            return f"Error: Unexpected error - {str(e)}"
     
     def _safe_eval(self, expression: str) -> float:
         """
