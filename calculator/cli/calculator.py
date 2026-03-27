@@ -11,6 +11,7 @@ Features:
 """
 
 import sys
+import math
 import operator
 from typing import Union, Optional
 
@@ -87,7 +88,10 @@ class Calculator:
             "round": round,
             "pow": pow,
             "max": max,
-            "min": min
+            "min": min,
+            "sqrt": math.sqrt,
+            "log": math.log,
+            "floor": math.floor
         }
         
         return eval(expression, allowed_names)
